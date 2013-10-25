@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBSystemContext.cs" />
+    <Compile Include="EfRepository.cs" />
     <Compile Include="Mapping\CategoriaMap.cs" />
     <Compile Include="Mapping\ClienteMap.cs" />
     <Compile Include="Mapping\DetallePedidoMap.cs" />
@@ -53,7 +54,9 @@
     <Compile Include="Mapping\PedidoMap.cs" />
     <Compile Include="Mapping\ProductoMap.cs" />
     <Compile Include="Mapping\ProveedorMap.cs" />
+    <Compile Include="ObjectContextBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IkaroContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

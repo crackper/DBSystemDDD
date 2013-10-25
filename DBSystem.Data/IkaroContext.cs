@@ -12,10 +12,10 @@ namespace DBSystem.Data
     /// <summary>
     /// Object context
     /// </summary>
-    public class SmartObjectContext : ObjectContextBase
+    public class IkaroContext : ObjectContextBase
     {
 
-        public SmartObjectContext(string nameOrConnectionString)
+        public IkaroContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
         }

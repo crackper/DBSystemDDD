@@ -33,7 +33,7 @@ namespace DBSystem.Core.Data
 
 		/// <summary>Executes sql by using SQL-Server Management Objects which supports GO statements.</summary>
 		/// <remarks>codehint: sm-add</remarks>
-		int ExecuteSqlThroughSmo(string sql);
+		//int ExecuteSqlThroughSmo(string sql);
 
         // codehint: sm-add (required for UoW implementation)
         string Alias { get; }
