@@ -9,7 +9,7 @@ namespace DBSystem.Data.Mapping
         public ProveedorMap()
         {
             // Primary Key
-            this.HasKey(t => t.id);
+            this.HasKey(t => t.Id);
 
             // Properties
             this.Property(t => t.razonSocial)
@@ -28,7 +28,7 @@ namespace DBSystem.Data.Mapping
 
             // Table & Column Mappings
             this.ToTable("Proveedor");
-            this.Property(t => t.id).HasColumnName("id");
+            this.Property(t => t.Id).HasColumnName("id");
             this.Property(t => t.razonSocial).HasColumnName("razonSocial");
             this.Property(t => t.ruc).HasColumnName("ruc");
             this.Property(t => t.direccion).HasColumnName("direccion");

@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 namespace DBSystem.Core.Domain
 {
-    public partial class Producto
+    public partial class Producto:BaseEntity
     {
         public Producto()
         {
             this.DetallePedidoes = new List<DetallePedido>();
         }
 
-        public int Id { get; set; }
         public int CategoriaId { get; set; }
         public string Codigo { get; set; }
         public string Descripcion { get; set; }

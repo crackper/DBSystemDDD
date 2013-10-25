@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 namespace DBSystem.Core.Domain
 {
-    public partial class Cliente
+    public partial class Cliente:BaseEntity
     {
         public Cliente()
         {
             this.Pedidoes = new List<Pedido>();
         }
 
-        public int id { get; set; }
         public string rucDni { get; set; }
         public string razonSocial { get; set; }
         public string direccion { get; set; }

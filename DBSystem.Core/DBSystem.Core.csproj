@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="Data\IDbContext.cs" />
+    <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Categoria.cs" />
     <Compile Include="Domain\Cliente.cs" />
     <Compile Include="Domain\DetallePedido.cs" />
@@ -55,8 +58,8 @@
     <Compile Include="Domain\Pedido.cs" />
     <Compile Include="Domain\Producto.cs" />
     <Compile Include="Domain\Proveedor.cs" />
-    <Compile Include="Domain\RepUti.cs" />
-    <Compile Include="Domain\sysdiagram.cs" />
+    <Compile Include="IPagedList.cs" />
+    <Compile Include="PagedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

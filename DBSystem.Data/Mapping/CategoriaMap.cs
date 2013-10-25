@@ -9,7 +9,7 @@ namespace DBSystem.Data.Mapping
         public CategoriaMap()
         {
             // Primary Key
-            this.HasKey(t => t.id);
+            this.HasKey(t => t.Id);
 
             // Properties
             this.Property(t => t.descripcion)
@@ -21,7 +21,7 @@ namespace DBSystem.Data.Mapping
 
             // Table & Column Mappings
             this.ToTable("Categoria");
-            this.Property(t => t.id).HasColumnName("id");
+            this.Property(t => t.Id).HasColumnName("id");
             this.Property(t => t.descripcion).HasColumnName("descripcion");
             this.Property(t => t.comentario).HasColumnName("comentario");
         }

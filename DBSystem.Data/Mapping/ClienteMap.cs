@@ -9,7 +9,7 @@ namespace DBSystem.Data.Mapping
         public ClienteMap()
         {
             // Primary Key
-            this.HasKey(t => t.id);
+            this.HasKey(t => t.Id);
 
             // Properties
             this.Property(t => t.rucDni)
@@ -25,7 +25,7 @@ namespace DBSystem.Data.Mapping
 
             // Table & Column Mappings
             this.ToTable("Cliente");
-            this.Property(t => t.id).HasColumnName("id");
+            this.Property(t => t.Id).HasColumnName("id");
             this.Property(t => t.rucDni).HasColumnName("rucDni");
             this.Property(t => t.razonSocial).HasColumnName("razonSocial");
             this.Property(t => t.direccion).HasColumnName("direccion");

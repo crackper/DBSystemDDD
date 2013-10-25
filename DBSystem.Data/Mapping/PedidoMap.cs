@@ -9,12 +9,12 @@ namespace DBSystem.Data.Mapping
         public PedidoMap()
         {
             // Primary Key
-            this.HasKey(t => t.id);
+            this.HasKey(t => t.Id);
 
             // Properties
             // Table & Column Mappings
             this.ToTable("Pedido");
-            this.Property(t => t.id).HasColumnName("id");
+            this.Property(t => t.Id).HasColumnName("id");
             this.Property(t => t.clienteId).HasColumnName("clienteId");
             this.Property(t => t.fecha).HasColumnName("fecha");
             this.Property(t => t.total).HasColumnName("total");

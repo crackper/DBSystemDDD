@@ -5,6 +5,5 @@ E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\obj\D
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\obj\Debug\DBSystem.Core.pdb
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\DBSystem.Core.dll.config
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\EntityFramework.dll
-E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\EntityFramework.SqlServer.dll
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\EntityFramework.xml
-E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\es\EntityFramework.resources.dll

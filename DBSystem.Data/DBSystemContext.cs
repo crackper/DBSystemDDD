@@ -24,8 +24,6 @@ namespace DBSystem.Data.Models
         public DbSet<Pedido> Pedidoes { get; set; }
         public DbSet<Producto> Productoes { get; set; }
         public DbSet<Proveedor> Proveedors { get; set; }
-        public DbSet<RepUti> RepUtis { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -36,8 +34,6 @@ namespace DBSystem.Data.Models
             modelBuilder.Configurations.Add(new PedidoMap());
             modelBuilder.Configurations.Add(new ProductoMap());
             modelBuilder.Configurations.Add(new ProveedorMap());
-            modelBuilder.Configurations.Add(new RepUtiMap());
-            modelBuilder.Configurations.Add(new sysdiagramMap());
         }
     }
 }
