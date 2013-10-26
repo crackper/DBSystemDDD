@@ -11,5 +11,7 @@ namespace DBSystem.Services
     public interface IProductoService
     {
         List<Producto> GetAllProductos(string productName = "");
+        Producto GetProductoById(Int32 Id);
+        void UpdateProducto(Producto producto);
     }
 }

@@ -23,7 +23,7 @@ namespace DBSystem.Data
         public EfRepository(IDbContext context)
         {
             this._context = context;
-            this.AutoCommitEnabled = true;
+            this.AutoCommitEnabled = false;
         }
 
         #region interface members

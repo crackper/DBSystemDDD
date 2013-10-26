@@ -33,5 +33,19 @@ namespace DBSystem.Web.Controllers
             return View(lista);
         }
 
+        public ActionResult Edit(Int32 id)
+        {
+            var producto = _productoService.GetProductoById(id);
+            return View(producto);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Producto producto)
+        {
+            _productoService.UpdateProducto(producto);
+
+            return RedirectToAction("index");
+        }
+
     }
 }
