@@ -13,20 +13,18 @@ namespace DBSystem.Services
     public class ProductoService:IProductoService
     {
         IRepository<Producto> _repositoryProducto;
+        IUnitOfWork _uow;
 
         public ProductoService()
         {
-            var context = new IkaroContext("DBSystemContext");   
-            _repositoryProducto = new EfRepository<Producto>(context);
-           // _repositoryProducto.AutoCommitEnabled = false;
+            var context = new IkaroContext("DBSystemContext");
+            _uow = new UnitOfWork(context);
+
+            _repositoryProducto = _uow.GetRepository<Producto>();
         }
 
         public List<Producto> GetAllProductos(string productName = "")
         {                   
-
-            /*var query = _repositoryProducto.Get(predicate:p=>p.Descripcion.ToUpper().Contains(productName.ToUpper()), 
-                                    orderBy: null, 
-                                    includeProperties:"");*/
 
             var query = _repositoryProducto.Table;
 
@@ -50,8 +48,7 @@ namespace DBSystem.Services
         public void UpdateProducto(Producto producto)
         {
             _repositoryProducto.Update(producto);
-           // _repositoryProducto.Context.SaveChanges();
-
+            _uow.Save();
         }
     }
 }

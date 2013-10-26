@@ -65,6 +65,7 @@
     <Compile Include="Data\Hooks\PreUpdateHook.cs" />
     <Compile Include="Data\IDbContext.cs" />
     <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\IUnitOfWork.cs" />
     <Compile Include="Data\RepositoryExtensions.cs" />
     <Compile Include="Domain\Categoria.cs" />
     <Compile Include="Domain\Cliente.cs" />
