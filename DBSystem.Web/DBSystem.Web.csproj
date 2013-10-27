@@ -329,6 +329,10 @@
       <Project>{a003aa06-caa8-47ce-aa4d-d62d4690b030}</Project>
       <Name>DBSystem.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DBSystem.Data\DBSystem.Data.csproj">
+      <Project>{f9238937-9e6e-465a-9fe0-559e890a4977}</Project>
+      <Name>DBSystem.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DBSystem.Services\DBSystem.Services.csproj">
       <Project>{836644b0-bc5d-45c4-9255-8ead3da8c6fb}</Project>
       <Name>DBSystem.Services</Name>

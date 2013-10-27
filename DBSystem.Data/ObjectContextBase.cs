@@ -36,7 +36,7 @@ namespace DBSystem.Data
 
         #region Ctor
 
-        protected ObjectContextBase(string nameOrConnectionString, string alias = null)
+        protected ObjectContextBase(string nameOrConnectionString="cnx", string alias = null)
             : base(nameOrConnectionString)
         {
             //((IObjectContextAdapter) this).ObjectContext.ContextOptions.LazyLoadingEnabled = true;

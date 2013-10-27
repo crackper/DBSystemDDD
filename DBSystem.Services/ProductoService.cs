@@ -33,7 +33,7 @@ namespace DBSystem.Services
                 query = query.Where(p => p.Descripcion.ToUpper().Contains(productName.ToUpper()));
             }
 
-            _repositoryProducto.Include(query, p=>p.Categoria);
+          _repositoryProducto.Include(query, p=>p.Categoria);
 
             return query.ToList();
         }

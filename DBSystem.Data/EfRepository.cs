@@ -119,7 +119,7 @@ namespace DBSystem.Data
                 try
                 {
                     this.Entities.Attach(entity);
-                    InternalContext.Entry(entity).State = System.Data.EntityState.Modified;
+                    InternalContext.Entry(entity).State = System.Data.EntityState.Modified;                  
                 }
                 finally { }
             }
