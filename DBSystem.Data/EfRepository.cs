@@ -141,7 +141,7 @@ namespace DBSystem.Data
                 _context.SaveChanges();
         }
 
-        public IQueryable<T> Expand(IQueryable<T> query, string path)
+        public IQueryable<T> Include(IQueryable<T> query, string path)
         {
             //Guard.ArgumentNotNull(query, "query");
             //Guard.ArgumentNotEmpty(path, "path");
@@ -149,7 +149,7 @@ namespace DBSystem.Data
             return query.Include(path);
         }
 
-        public IQueryable<T> Expand<TProperty>(IQueryable<T> query, Expression<Func<T, TProperty>> path)
+        public IQueryable<T> Include<TProperty>(IQueryable<T> query, Expression<Func<T, TProperty>> path)
         {
             //Guard.ArgumentNotNull(query, "query");
             //Guard.ArgumentNotNull(path, "path");

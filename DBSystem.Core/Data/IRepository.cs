@@ -65,7 +65,7 @@ namespace DBSystem.Core.Data
         /// Deeper paths can be specified by separating the path with dots.
         /// </param>
         /// <returns>A new query object to which the expansion was applied.</returns>
-        IQueryable<T> Expand(IQueryable<T> query, string path);
+        IQueryable<T> Include(IQueryable<T> query, string path);
 
         /// <summary>
         /// Instructs the repository to eager load entities that may be in the type's association path.
@@ -73,7 +73,7 @@ namespace DBSystem.Core.Data
         /// <param name="query">A previously created query object which the expansion should be applied to.</param>
         /// <param name="path">The path of the child entities to eager load.</param>
         /// <returns>A new query object to which the expansion was applied.</returns>
-        IQueryable<T> Expand<TProperty>(IQueryable<T> query, Expression<Func<T, TProperty>> path);
+        IQueryable<T> Include<TProperty>(IQueryable<T> query, Expression<Func<T, TProperty>> path);
 
         /// <summary>
         /// Gets a list of modified properties for the specified entity

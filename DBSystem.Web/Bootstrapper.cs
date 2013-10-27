@@ -1,5 +1,6 @@
 using System.Web.Mvc;
 using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
 using Unity.Mvc4;
 
 namespace DBSystem.Web
@@ -18,7 +19,7 @@ namespace DBSystem.Web
     private static IUnityContainer BuildUnityContainer()
     {
       var container = new UnityContainer();
-
+      container.LoadConfiguration();
       // register all your components with the container here
       // it is NOT necessary to register your controllers
 

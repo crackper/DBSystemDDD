@@ -21,15 +21,15 @@ namespace DBSystem.Win
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var service = new ProductoService();
+            //var service = new ProductoService();
 
-            productoBindingSource.DataSource = service.GetAllProductos(textBox1.Text);
+            //productoBindingSource.DataSource = service.GetAllProductos(textBox1.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var service = new ProductoService();
-            productoBindingSource.DataSource = service.GetAllProductos(textBox1.Text);
+            //var service = new ProductoService();
+            //productoBindingSource.DataSource = service.GetAllProductos(textBox1.Text);
         }
     }
 }

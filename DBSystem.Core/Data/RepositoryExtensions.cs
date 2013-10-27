@@ -67,7 +67,7 @@ namespace DBSystem.Core.Data
             foreach (var includeProperty in includeProperties.Split
                 (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
-                query = rs.Expand(query, includeProperty.Trim());
+                query = rs.Include(query, includeProperty.Trim());
             }
 
             if (orderBy != null)

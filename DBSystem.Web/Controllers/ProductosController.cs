@@ -12,9 +12,9 @@ namespace DBSystem.Web.Controllers
     {
         IProductoService _productoService;
 
-        public ProductosController()
+        public ProductosController(IProductoService productoService)
         {
-            _productoService = new ProductoService();
+            _productoService = productoService;
         }
 
         //

@@ -15,11 +15,11 @@ namespace DBSystem.Services
         IRepository<Producto> _repositoryProducto;
         IUnitOfWork _uow;
 
-        public ProductoService()
+        public ProductoService(IUnitOfWork uow)
         {
-            var context = new IkaroContext("DBSystemContext");
-            _uow = new UnitOfWork(context);
-
+            //var context = new IkaroContext("DBSystemContext");
+            //_uow = new UnitOfWork(context);
+            _uow = uow;
             _repositoryProducto = _uow.GetRepository<Producto>();
         }
 
@@ -33,7 +33,7 @@ namespace DBSystem.Services
                 query = query.Where(p => p.Descripcion.ToUpper().Contains(productName.ToUpper()));
             }
 
-            _repositoryProducto.Expand(query, "Categoria");
+            _repositoryProducto.Include(query, p=>p.Categoria);
 
             return query.ToList();
         }
