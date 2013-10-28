@@ -4,6 +4,5 @@ E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\D
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\EntityFramework.dll
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\EntityFramework.xml
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\bin\Debug\es\EntityFramework.resources.dll
-E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\obj\Debug\DBSystem.Core.csprojResolveAssemblyReference.cache
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\obj\Debug\DBSystem.Core.dll
 E:\Documents\Visual Studio 2012\Projects\2013-2\DBSystemCore\DBSystem.Core\obj\Debug\DBSystem.Core.pdb

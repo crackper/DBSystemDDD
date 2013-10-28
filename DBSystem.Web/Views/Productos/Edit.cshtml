@@ -1,4 +1,4 @@
-﻿@model DBSystem.Core.Domain.Producto
+﻿@model DBSystem.Web.Models.ProductoModel
 
 @{
     ViewBag.Title = "Edit";
@@ -11,15 +11,9 @@
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Producto</legend>
+        <legend>ProductoModel</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CategoriaId)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CategoriaId)
-            @Html.ValidationMessageFor(model => model.CategoriaId)
-        </div>
+        @Html.HiddenFor(model => model.Id)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Codigo)
@@ -35,6 +29,14 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.Descripcion)
             @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CategoriaId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model =>model.CategoriaId,Model.CategoriasDiponibles)
+            @Html.ValidationMessageFor(model => model.CategoriaId)
         </div>
 
         <div class="editor-label">
@@ -60,8 +62,6 @@
             @Html.EditorFor(model => model.Descontinuado)
             @Html.ValidationMessageFor(model => model.Descontinuado)
         </div>
-
-        @Html.HiddenFor(model => model.Id)
 
         <p>
             <input type="submit" value="Save" />

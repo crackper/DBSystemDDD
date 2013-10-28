@@ -30,7 +30,7 @@ namespace DBSystem.Web.Controllers
             var lista = _productoService.GetAllProductos("")
                 .Select(p => 
                     { 
-                        return new ProductoModel() 
+                        return new ProductoViewModel() 
                         {
                             Id=p.Id,
                             Codigo = p.Codigo,
@@ -42,16 +42,22 @@ namespace DBSystem.Web.Controllers
                         }; 
                     }).ToList();
 
-            return View(lista);
+            var model = new ProductoListModel() 
+            {
+                Criterio = "",
+                Productos = lista
+            };
+
+            return View(model);
         }
 
         [HttpPost]
-        public ActionResult Index(string criterio="")
+        public ActionResult Index(ProductoListModel model)
         {
-            var lista = _productoService.GetAllProductos(criterio)
+            var lista = _productoService.GetAllProductos( model.Criterio)
                 .Select(p =>
                 {
-                    return new ProductoModel()
+                    return new ProductoViewModel()
                     {
                         Id = p.Id,
                         Codigo = p.Codigo,
@@ -62,8 +68,10 @@ namespace DBSystem.Web.Controllers
                         Descontinuado = p.Descontinuado
                     };
                 }).ToList();
+           
+            model.Productos = lista;
 
-            return View(lista);
+            return View(model);
         }
 
         public ActionResult Products_Read([DataSourceRequest] DataSourceRequest request)
@@ -75,7 +83,27 @@ namespace DBSystem.Web.Controllers
         public ActionResult Edit(Int32 id)
         {
             var producto = _productoService.GetProductoById(id);
-            return View(producto);
+            var categorias = _catgoriaService.GetGategoriasByCriterio("");
+
+            var productoModel = new ProductoModel() 
+            {
+                Id= producto.Id,
+                CategoriaId = producto.CategoriaId,
+                Codigo = producto.Codigo,
+                Descripcion = producto.Descripcion,
+                Precio = producto.Precio,
+                Stock = producto.Stock,
+                Descontinuado = producto.Descontinuado,
+            };
+
+            categorias.Each(c => productoModel.CategoriasDiponibles.Add(
+                            new SelectListItem() 
+                            { 
+                                Text = c.descripcion, 
+                                Value = c.Id.ToString()
+                            }));
+
+            return View(productoModel);
         }
 
         [HttpPost]

@@ -28,7 +28,7 @@ namespace DBSystem.Services
 
             var query = _repositoryProducto.Table;
 
-            if (productName !="")
+            if (productName !="" && productName !=null)
             {
                 query = query.Where(p => p.Descripcion.ToUpper().Contains(productName.ToUpper()));
             }
