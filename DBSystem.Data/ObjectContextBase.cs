@@ -46,6 +46,8 @@ namespace DBSystem.Data
             this._postHooks = new List<IPostActionHook>();
 
             this.Alias = null;
+
+            this.ProxyCreationEnabled = false;
         }
 
         #endregion
